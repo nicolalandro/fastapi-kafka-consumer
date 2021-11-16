@@ -20,7 +20,7 @@ consumer = None
 _state = 0
 
 # env variables
-KAFKA_TOPIC = os.getenv('KAFKA_TOPIC')
+KAFKA_TOPIC = os.getenv('KAFKA_TOPIC', "test")
 KAFKA_CONSUMER_GROUP_PREFIX = os.getenv('KAFKA_CONSUMER_GROUP_PREFIX', 'group')
 KAFKA_BOOTSTRAP_SERVERS = os.getenv('KAFKA_BOOTSTRAP_SERVERS', 'kafka_zookeeper:9092')
 
@@ -88,7 +88,7 @@ async def initialize():
         log.info(f'Initializing API with data from msg: {msg}')
 
         # update the API state
-        _update_state(msg)
+        #_update_state(msg)
         return
 
 

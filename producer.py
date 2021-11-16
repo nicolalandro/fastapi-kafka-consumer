@@ -6,7 +6,7 @@ from random import randint
 
 
 # env variables
-KAFKA_TOPIC = os.getenv('KAFKA_TOPIC')
+KAFKA_TOPIC = os.getenv('KAFKA_TOPIC', "test")
 KAFKA_BOOTSTRAP_SERVERS = os.getenv('KAFKA_BOOTSTRAP_SERVERS', 'kafka_zookeeper:9092')
 
 # global variables
