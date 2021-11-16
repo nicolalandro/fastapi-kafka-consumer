@@ -22,7 +22,7 @@ _state = 0
 # env variables
 KAFKA_TOPIC = os.getenv('KAFKA_TOPIC')
 KAFKA_CONSUMER_GROUP_PREFIX = os.getenv('KAFKA_CONSUMER_GROUP_PREFIX', 'group')
-KAFKA_BOOTSTRAP_SERVERS = os.getenv('KAFKA_BOOTSTRAP_SERVERS', 'localhost:9092')
+KAFKA_BOOTSTRAP_SERVERS = os.getenv('KAFKA_BOOTSTRAP_SERVERS', 'kafka_zookeeper:9092')
 
 # initialize logger
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',

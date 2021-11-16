@@ -10,3 +10,13 @@ services:
     - .:/code
     command: code-server --bind-addr "0.0.0.0:8080" --auth none /code
   
+  kafka_zookeeper:
+    image: landoop/fast-data-dev
+    ports:
+    - "9092:9092" # kafka brooker
+    - "8081:8081" # Schema registry
+    - "8082:8082" # Kafka REST proxy
+    - "8083:8083" # Kafka connect distributed
+    - "2181:2181" # Zookeeper
+    - "3030:3030" # Web server
+    - "3031:3031" # coyote health check
