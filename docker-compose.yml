@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  vscode:
+    image: registry.gitlab.com/nicolalandro/vscode_docker
+    ports:
+    - '8080:8080'
+    - '8000:8000'
+    volumes:
+    - .:/code
+    command: code-server --bind-addr "0.0.0.0:8080" --auth none /code
+  
