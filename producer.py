@@ -28,5 +28,6 @@ async def send_one():
         # wait for all pending messages to be delivered or expire.
         await producer.stop()
 
-# send message
-loop.run_until_complete(send_one())
+if __name__ == '__main__':
+    # send message
+    loop.run_until_complete(send_one())

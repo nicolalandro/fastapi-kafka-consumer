@@ -25,5 +25,5 @@ async def consume():
     finally:
         # will leave consumer group; perform autocommit if enabled.
         await consumer.stop()
-
-loop.run_until_complete(consume())
+if __name__ == '__main__':
+    loop.run_until_complete(consume())
